@@ -1,9 +1,238 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
 <head>
-    <title>测试</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dayefeliz - Automotive AI Solutions | حلول الذكاء الاصطناعي للسيارات</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Hello World</h1>
+    <!-- Language Toggle -->
+    <div class="lang-toggle">
+        <button onclick="switchLanguage('en')" class="lang-btn active" id="en-btn">English</button>
+        <button onclick="switchLanguage('ar')" class="lang-btn" id="ar-btn">العربية</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>DAYEFELIZ</h1>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                <li><a href="#about" data-en="About" data-ar="من نحن">About</a></li>
+                <li><a href="#services" data-en="Services" data-ar="خدماتنا">Services</a></li>
+                <li><a href="#technology" data-en="Technology" data-ar="التكنولوجيا">Technology</a></li>
+                <li><a href="#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title" data-en="Driving the Future with AI" data-ar="نقود المستقبل بالذكاء الاصطناعي">
+                    Driving the Future with AI
+                </h1>
+                <p class="hero-subtitle" data-en="Transforming automotive excellence through intelligent driving solutions" data-ar="تحويل التميز في صناعة السيارات من خلال حلول القيادة الذكية">
+                    Transforming automotive excellence through intelligent driving solutions
+                </p>
+                <a href="#contact" class="cta-button" data-en="Get Started" data-ar="ابدأ الآن">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-en="About Dayefeliz" data-ar="عن ديفيليز">About Dayefeliz</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-en="Founded on a strong heritage in automotive trading, Dayefeliz has evolved into a pioneering force in the AI revolution. Recognizing the transformative power of artificial intelligence, we have strategically shifted our focus to develop cutting-edge autonomous driving technologies that enhance our core vehicle business." 
+                       data-ar="تأسست ديفيليز على تراث قوي في تجارة السيارات، وتطورت لتصبح قوة رائدة في ثورة الذكاء الاصطناعي. إدراكًا للقوة التحويلية للذكاء الاصطناعي، قمنا بتحويل تركيزنا استراتيجيًا لتطوير تقنيات القيادة الذاتية المتطورة التي تعزز أعمالنا الأساسية في مجال المركبات.">
+                        Founded on a strong heritage in automotive trading, Dayefeliz has evolved into a pioneering force in the AI revolution. Recognizing the transformative power of artificial intelligence, we have strategically shifted our focus to develop cutting-edge autonomous driving technologies that enhance our core vehicle business.
+                    </p>
+                    <p data-en="Today, we stand at the intersection of traditional automotive excellence and innovative AI solutions, empowering our vehicles with intelligence that redefines the driving experience." 
+                       data-ar="اليوم، نقف عند تقاطع التميز التقليدي في صناعة السيارات والحلول المبتكرة للذكاء الاصطناعي، مما يمكّن مركباتنا بذكاء يعيد تعريف تجربة القيادة.">
+                        Today, we stand at the intersection of traditional automotive excellence and innovative AI solutions, empowering our vehicles with intelligence that redefines the driving experience.
+                    </p>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <h3>15+</h3>
+                        <p data-en="Years in Automotive" data-ar="سنوات في صناعة السيارات">Years in Automotive</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>50+</h3>
+                        <p data-en="AI Solutions Deployed" data-ar="حلول الذكاء الاصطناعي المنفذة">AI Solutions Deployed</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>98%</h3>
+                        <p data-en="Client Satisfaction" data-ar="رضا العملاء">Client Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title" data-en="Our Services" data-ar="خدماتنا">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🚗</div>
+                    <h3 data-en="Autonomous Driving Systems" data-ar="أنظمة القيادة الذاتية">Autonomous Driving Systems</h3>
+                    <p data-en="Advanced AI-powered self-driving technology for Level 3-4 autonomous vehicles, featuring real-time decision making and adaptive learning capabilities." 
+                       data-ar="تقنية القيادة الذاتية المتقدمة المدعومة بالذكاء الاصطناعي للمركبات ذاتية القيادة من المستوى 3-4، مع قدرات اتخاذ القرار في الوقت الفعلي والتعلم التكيفي.">
+                        Advanced AI-powered self-driving technology for Level 3-4 autonomous vehicles, featuring real-time decision making and adaptive learning capabilities.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">👁️</div>
+                    <h3 data-en="Computer Vision Solutions" data-ar="حلول الرؤية الحاسوبية">Computer Vision Solutions</h3>
+                    <p data-en="State-of-the-art object detection, lane recognition, and traffic sign identification systems using deep learning neural networks." 
+                       data-ar="أحدث أنظمة كشف الكائنات والتعرف على المسارات وتحديد إشارات المرور باستخدام شبكات التعلم العميق العصبية.">
+                        State-of-the-art object detection, lane recognition, and traffic sign identification systems using deep learning neural networks.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🧠</div>
+                    <h3 data-en="Predictive Maintenance AI" data-ar="الذكاء الاصطناعي للصيانة التنبؤية">Predictive Maintenance AI</h3>
+                    <p data-en="Machine learning algorithms that predict vehicle maintenance needs before failures occur, reducing downtime and extending vehicle lifespan." 
+                       data-ar="خوارزميات التعلم الآلي التي تتنبأ باحتياجات صيانة المركبات قبل حدوث الأعطال، مما يقلل من وقت التوقف ويطيل عمر المركبة.">
+                        Machine learning algorithms that predict vehicle maintenance needs before failures occur, reducing downtime and extending vehicle lifespan.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3 data-en="Advanced Driver Assistance" data-ar="مساعدة السائق المتقدمة">Advanced Driver Assistance</h3>
+                    <p data-en="Comprehensive ADAS features including adaptive cruise control, collision avoidance, blind spot detection, and parking assistance powered by AI." 
+                       data-ar="ميزات ADAS الشاملة بما في ذلك التحكم التكيفي في السرعة، وتجنب الاصطدام، واكتشاف النقاط العمياء، ومساعدة الوقوف المدعومة بالذكاء الاصطناعي.">
+                        Comprehensive ADAS features including adaptive cruise control, collision avoidance, blind spot detection, and parking assistance powered by AI.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3 data-en="Fleet Intelligence Platform" data-ar="منصة ذكاء الأساطيل">Fleet Intelligence Platform</h3>
+                    <p data-en="AI-driven fleet management solutions providing route optimization, driver behavior analysis, and real-time performance monitoring." 
+                       data-ar="حلول إدارة الأساطيل المدفوعة بالذكاء الاصطناعي توفر تحسين المسارات، وتحليل سلوك السائق، ومراقبة الأداء في الوقت الفعلي.">
+                        AI-driven fleet management solutions providing route optimization, driver behavior analysis, and real-time performance monitoring.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3 data-en="Custom AI Integration" data-ar="تكامل الذكاء الاصطناعي المخصص">Custom AI Integration</h3>
+                    <p data-en="Tailored AI solutions designed to meet specific business requirements, from proof-of-concept to full-scale deployment and ongoing support." 
+                       data-ar="حلول الذكاء الاصطناعي المخصصة المصممة لتلبية متطلبات الأعمال المحددة، من إثبات المفهوم إلى النشر الكامل والدعم المستمر.">
+                        Tailored AI solutions designed to meet specific business requirements, from proof-of-concept to full-scale deployment and ongoing support.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology" class="technology">
+        <div class="container">
+            <h2 class="section-title" data-en="Our Technology" data-ar="تقنيتنا">Our Technology</h2>
+            <div class="tech-content">
+                <div class="tech-item">
+                    <h3 data-en="Deep Learning & Neural Networks" data-ar="التعلم العميق والشبكات العصبية">Deep Learning & Neural Networks</h3>
+                    <p data-en="Utilizing cutting-edge convolutional neural networks (CNNs) and recurrent neural networks (RNNs) for real-time perception and decision-making in complex driving scenarios." 
+                       data-ar="استخدام أحدث الشبكات العصبية التلافيفية والشبكات العصبية المتكررة للإدراك واتخاذ القرارات في الوقت الفعلي في سيناريوهات القيادة المعقدة.">
+                        Utilizing cutting-edge convolutional neural networks (CNNs) and recurrent neural networks (RNNs) for real-time perception and decision-making in complex driving scenarios.
+                    </p>
+                </div>
+                <div class="tech-item">
+                    <h3 data-en="Sensor Fusion Technology" data-ar="تقنية دمج أجهزة الاستشعار">Sensor Fusion Technology</h3>
+                    <p data-en="Integrating data from LiDAR, radar, cameras, and ultrasonic sensors to create a comprehensive 360-degree environmental awareness system." 
+                       data-ar="دمج البيانات من LiDAR والرادار والكاميرات وأجهزة الاستشعار بالموجات فوق الصوتية لإنشاء نظام شامل للوعي البيئي بزاوية 360 درجة.">
+                        Integrating data from LiDAR, radar, cameras, and ultrasonic sensors to create a comprehensive 360-degree environmental awareness system.
+                    </p>
+                </div>
+                <div class="tech-item">
+                    <h3 data-en="Edge AI Computing" data-ar="الحوسبة الذكية الطرفية">Edge AI Computing</h3>
+                    <p data-en="High-performance onboard processing units enabling low-latency AI inference without relying on cloud connectivity for critical driving functions." 
+                       data-ar="وحدات معالجة عالية الأداء على متن المركبة تمكن من استنتاج الذكاء الاصطناعي منخفض الكمون دون الاعتماد على الاتصال السحابي للوظائف الحرجة للقيادة.">
+                        High-performance onboard processing units enabling low-latency AI inference without relying on cloud connectivity for critical driving functions.
+                    </p>
+                </div>
+                <div class="tech-item">
+                    <h3 data-en="Reinforcement Learning" data-ar="التعلم المعزز">Reinforcement Learning</h3>
+                    <p data-en="Advanced training methodologies allowing our AI systems to continuously improve through simulated and real-world driving experiences." 
+                       data-ar="منهجيات تدريب متقدمة تسمح لأنظمة الذكاء الاصطناعي لدينا بالتحسين المستمر من خلال تجارب القيادة المحاكاة والواقعية.">
+                        Advanced training methodologies allowing our AI systems to continuously improve through simulated and real-world driving experiences.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 data-en="Get in Touch" data-ar="تواصل معنا">Get in Touch</h3>
+                    <p data-en="Ready to transform your automotive business with AI? Reach out to discuss how Dayefeliz can power your digital transformation." 
+                       data-ar="هل أنت مستعد لتحويل أعمالك في مجال السيارات بالذكاء الاصطناعي؟ تواصل معنا لمناقشة كيف يمكن لديفيليز تشغيل التحول الرقمي الخاص بك.">
+                        Ready to transform your automotive business with AI? Reach out to discuss how Dayefeliz can power your digital transformation.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <div>
+                                <h4 data-en="Email" data-ar="البريد الإلكتروني">Email</h4>
+                                <a href="mailto:ai@dayefeliz.net">ai@dayefeliz.net</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🌐</span>
+                            <div>
+                                <h4 data-en="Business Hours" data-ar="ساعات العمل">Business Hours</h4>
+                                <p data-en="Sunday - Thursday: 9:00 AM - 6:00 PM (AST)" data-ar="الأحد - الخميس: 9:00 صباحًا - 6:00 مساءً (التوقيت العربي)">Sunday - Thursday: 9:00 AM - 6:00 PM (AST)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <input type="text" placeholder="Name / الاسم" required>
+                        <input type="email" placeholder="Email / البريد الإلكتروني" required>
+                        <input type="text" placeholder="Company / الشركة">
+                        <textarea rows="5" placeholder="Message / الرسالة" required></textarea>
+                        <button type="submit" class="submit-btn" data-en="Send Message" data-ar="إرسال الرسالة">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>DAYEFELIZ</h2>
+                    <p data-en="Driving Innovation Through AI" data-ar="قيادة الابتكار من خلال الذكاء الاصطناعي">Driving Innovation Through AI</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home" data-en="Home" data-ar="الرئيسية">Home</a>
+                    <a href="#about" data-en="About" data-ar="من نحن">About</a>
+                    <a href="#services" data-en="Services" data-ar="خدماتنا">Services</a>
+                    <a href="#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dayefeliz. <span data-en="All rights reserved." data-ar="جميع الحقوق محفوظة.">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
