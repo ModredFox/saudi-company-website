@@ -34,40 +34,6 @@ html {
     padding: 0 20px;
 }
 
-/* Language Toggle */
-.lang-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-    display: flex;
-    gap: 10px;
-    background: var(--white);
-    padding: 5px;
-    border-radius: 25px;
-    box-shadow: var(--shadow);
-}
-
-.lang-btn {
-    padding: 8px 20px;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    border-radius: 20px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    font-size: 14px;
-}
-
-.lang-btn:hover {
-    background: var(--bg-light);
-}
-
-.lang-btn.active {
-    background: var(--primary-color);
-    color: var(--white);
-}
-
 /* Navigation */
 .navbar {
     background: var(--white);
@@ -82,6 +48,42 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.navbar-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* Language Toggle */
+.lang-toggle {
+    display: flex;
+    gap: 5px;
+    background: var(--bg-light);
+    padding: 4px;
+    border-radius: 25px;
+}
+
+.lang-btn {
+    padding: 8px 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    color: var(--text-dark);
+}
+
+.lang-btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.lang-btn.active {
+    background: var(--primary-color);
+    color: var(--white);
 }
 
 .logo h1 {
@@ -498,6 +500,11 @@ section {
     
     .hero-subtitle {
         font-size: 1.1rem;
+    }
+    
+    .navbar-content {
+        flex-direction: column;
+        gap: 1rem;
     }
     
     .nav-menu {

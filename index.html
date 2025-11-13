@@ -7,25 +7,26 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Language Toggle -->
-    <div class="lang-toggle">
-        <button onclick="switchLanguage('en')" class="lang-btn active" id="en-btn">English</button>
-        <button onclick="switchLanguage('ar')" class="lang-btn" id="ar-btn">العربية</button>
-    </div>
-
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="logo">
                 <h1>DAYEFELIZ</h1>
             </div>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" data-en="Home" data-ar="الرئيسية">Home</a></li>
-                <li><a href="#about" data-en="About" data-ar="من نحن">About</a></li>
-                <li><a href="#services" data-en="Services" data-ar="خدماتنا">Services</a></li>
-                <li><a href="#technology" data-en="Technology" data-ar="التكنولوجيا">Technology</a></li>
-                <li><a href="#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
-            </ul>
+            <div class="navbar-content">
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#home" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                    <li><a href="#about" data-en="About" data-ar="من نحن">About</a></li>
+                    <li><a href="#services" data-en="Services" data-ar="خدماتنا">Services</a></li>
+                    <li><a href="#technology" data-en="Technology" data-ar="التكنولوجيا">Technology</a></li>
+                    <li><a href="#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
+                </ul>
+                <!-- Language Toggle -->
+                <div class="lang-toggle">
+                    <button onclick="switchLanguage('en')" class="lang-btn active" id="en-btn">English</button>
+                    <button onclick="switchLanguage('ar')" class="lang-btn" id="ar-btn">العربية</button>
+                </div>
+            </div>
         </div>
     </nav>
 
