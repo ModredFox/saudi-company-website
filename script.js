@@ -31,13 +31,34 @@ function switchLanguage(lang) {
     localStorage.setItem('preferredLanguage', lang);
 }
 
+// Initialize language buttons with event listeners
+function initLanguageButtons() {
+    const enBtn = document.getElementById('en-btn');
+    const arBtn = document.getElementById('ar-btn');
+    
+    if (enBtn) {
+        enBtn.addEventListener('click', function() {
+            switchLanguage('en');
+        });
+    }
+    
+    if (arBtn) {
+        arBtn.addEventListener('click', function() {
+            switchLanguage('ar');
+        });
+    }
+}
+
 // Load saved language preference
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize language buttons
+    initLanguageButtons();
+    
     const savedLang = localStorage.getItem('preferredLanguage') || 'en';
     switchLanguage(savedLang);
     
     // Smooth scroll for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
@@ -50,25 +71,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Form submission handler
+    // Contact form submission handler
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form data
-            const formData = new FormData(contactForm);
-            
-            // Show success message (you can customize this)
             alert(currentLang === 'en' 
                 ? 'Thank you for your message! We will get back to you soon.' 
                 : 'شكرا لك على رسالتك! سنعود إليك قريبا.');
             
-            // Reset form
             contactForm.reset();
+        });
+    }
+    
+    // Demo form submission handler
+    const demoForm = document.getElementById('demoForm');
+    if (demoForm) {
+        demoForm.addEventListener('submit', function(e) {
+            e.preventDefault();
             
-            // In a real implementation, you would send this data to a server
-            // Example: fetch('/api/contact', { method: 'POST', body: formData })
+            alert(currentLang === 'en' 
+                ? 'Thank you for your interest! Saeed Al-Rashidi will contact you within 24 hours to schedule your demo.' 
+                : 'شكرا لاهتمامك! سيتواصل معك سعيد الراشدي في غضون 24 ساعة لجدولة العرض التوضيحي الخاص بك.');
+            
+            demoForm.reset();
         });
     }
     
@@ -78,8 +105,8 @@ document.addEventListener('DOMContentLoaded', () => {
         rootMargin: '0px 0px -100px 0px'
     };
     
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
@@ -87,8 +114,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
     
-    // Observe service cards and tech items
-    document.querySelectorAll('.service-card, .tech-item, .stat-item').forEach(el => {
+    // Observe service cards, tech items, and stat items
+    document.querySelectorAll('.service-card, .tech-item, .stat-item').forEach(function(el) {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
         el.style.transition = 'all 0.6s ease';
@@ -97,19 +124,19 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Add active state to nav links based on scroll position
-window.addEventListener('scroll', () => {
+window.addEventListener('scroll', function() {
     let current = '';
     const sections = document.querySelectorAll('section[id]');
     
-    sections.forEach(section => {
+    sections.forEach(function(section) {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        if (scrollY >= sectionTop - 200) {
+        if (window.scrollY >= sectionTop - 200) {
             current = section.getAttribute('id');
         }
     });
     
-    document.querySelectorAll('.nav-menu a').forEach(link => {
+    document.querySelectorAll('.nav-menu a').forEach(function(link) {
         link.classList.remove('active');
         if (link.getAttribute('href') === `#${current}`) {
             link.classList.add('active');
